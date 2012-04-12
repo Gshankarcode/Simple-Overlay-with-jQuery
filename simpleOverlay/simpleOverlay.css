@@ -1,0 +1,17 @@
+﻿/*Insert Closing Icon Image Here
+div.ui-overlay span.ui-overlay-close-icon, .ui-suboverlay-close-icon {background-image:url('/images/overlay_sprite.png');}
+*/
+
+div.ui-overlay-screen {position:absolute;top:0;left:0;z-index:200;background-color:#000;opacity:0;}
+div.ui-overlay {position:absolute;top:0;left:0;z-index:201;padding:11px 18px;}
+div.ui-overlay-container {background-color:#ffffff;box-shadow:0 0 15px #000;min-width:100px;min-height:100px;position:relative;}
+div.ui-overlay-content {}
+div.ui-overlay-content.ajaxLoading {position:absolute;visibility:hidden;}
+div.ui-overlay div.ui-loading-indicator {position:static;width:200px;height:200px;background-position:center center;}
+div.ui-overlay span.ui-overlay-close-icon {z-index:10; display:block;cursor:pointer;position:absolute;top:0;right:0;width:36px;height:36px;background-position:0 0; background-color:red;}
+
+
+.ui-overlay.ui-busy .ui-busy-wash {width:100%;height:100%;position:absolute;top:0;left:0;background-color:#fff;opacity:0.7;}
+.ui-overlay .ui-busy-indicator {display:none;}
+.ui-overlay.ui-busy .ui-busy-indicator {display:block;position:absolute;top:50%;left:50%;}
+.ui-overlay.ui-busy .ui-overlay-close-icon {display:none;}
