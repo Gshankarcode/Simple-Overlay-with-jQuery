@@ -1,0 +1,27 @@
+After including the simpleOverlay.css and simpleOverlay.js files in your HTML page you can trigger an overlay as below. Obviously being a jQuery plugin, you must include the jQuery library as well.
+
+This is an example of how to create an overlay once the plugin has been added, this would trigger the overlay when you click on a div element with the class button.
+
+$('div.button').click(function (e) {
+
+var content = '<p style="height:400px; width:400px; padding:25px;">OverlayContent</p>';
+			
+     var overlay = new simpleOverlay.Overlay({
+	triggerEvent: e,
+	ajaxContent: false,
+	content: content
+     });
+			
+});
+
+If you wanted to populate the overlay with content returned after an AJAX call, you would do this:
+			
+			var overlay = new simpleOverlay.Overlay({
+				triggerEvent: e,
+				ajaxContent: true
+			});
+			
+			overlay.Populate(contentToPopulateWith);
+			
+The overlay will then animate and resize itself accordingly, the overlay also has functions such as overlay.SetWorking() and overlay.FinishWorking() to apply a wash over the content currently in the overlay and to display a loading spinner image. This is done by default when an ajaxContent is true, when the content is recieved by the overlay it will remove this spinner automatically.
+
