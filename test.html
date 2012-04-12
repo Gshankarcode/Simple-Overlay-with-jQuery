@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta name="description" content="desc" />
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8" />
+	
+	<link rel="stylesheet" href="simpleOverlay/simpleOverlay.css" type="text/css" media="screen" charset="utf-8" />
+	<script type="text/javascript" src="simpleOverlay/simpleOverlay.js"></script>
+	
+	<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+
+	<script type="text/javascript">
+    $(window).load(function() {
+    
+        $('div.button').click(function (e) {
+			
+			var content = '<p style="height:400px; width:400px; padding: 25px;">Overlay Content</p>';
+			
+			var overlay = new simpleOverlay.Overlay({
+				triggerEvent: e,
+				ajaxContent: false,
+				content: content
+			});
+			
+
+			/*If you wanted to populate the overlay with content returned after an AJAX call, you would do this:
+			
+			var overlay = new simpleOverlay.Overlay({
+				triggerEvent: e,
+				ajaxContent: true
+			});
+			
+			overlay.Populate(contentToPopulateWith);
+			
+			The overlay will then animate and resize itself accordingly, the overlay also has functions such as
+			overlay.SetWorking() and overlay.FinishWorking() to apply a wash over the content currently in the overlay and to
+			display a loading spinner image. This is done by default when an ajaxContent is true, when the content is recieved 
+			by the overlay it will remove this spinner automatically.
+			*/
+		});
+    });
+    </script>
+	<title>Simple Overlay Example</title>
+
+</head>
+<body>
+  <div class="siteWrapper">
+  	<div class="siteContent clearfix">
+  		  	<div class="button">
+				<p>CLICK FOR OVERLAY</p>
+  			</div>
+	</div>
+	
+  </div>
+
+</body>
+</html>
